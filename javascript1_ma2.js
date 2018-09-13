@@ -72,6 +72,21 @@ Person.prototype.calculateAge =
 
 andreas.calculateAge();
 
+function Person(first, last, age, gender, interests) {
+    this.name = {
+        first,
+        last
+    };
+    this.age = age;
+    this.gender = gender;
+    this.interests = interests;
+}
+
+Person.prototype.greeting = function() {
+    console.log('HI!' + this.name.first + '.');
+}
+
+
 /*
 
 function Person(first, last, age, gender, interests) {
@@ -110,6 +125,11 @@ console.log(grizzly.growl(), polar.growl())
 
 //2. Create an array of numbers from 1 - 10; slice the 5th number in the array
 
+var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+var leftSlice = numbers.slice(0,4);
+var rightSlice = numbers.slice(5,10);
+var slicedNumbers = leftSlice + ',' + rightSlice;
+console.log(slicedNumbers);
 
 //3. Delete the last number in the array that you created above.
 
