@@ -86,7 +86,6 @@ Person.prototype.greeting = function() {
     console.log('HI!' + this.name.first + '.');
 }
 
-
 //2. Create an array of numbers from 1 - 10; slice the 5th number in the array
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -121,6 +120,18 @@ console.log(myString);
 
 //5. Create an array and a button. The array should contain 4 football clubs names. When the button is clicked, remove all elements out of the array that we just created. There after add in 4 names of cars inside that array. Log it to the console.
 
+var fotballNames = ['Manchester','Liverpool','Arsenal','Chelsea'];
+
+function replaceNames() {
+    for (var i = 0; i < fotballNames.length; i++) {
+        fotballNames = [];
+        var carNames = fotballNames;
+
+        carNames = ['Audi','BMW','Mercedes','Honda'];
+    }
+    document.getElementById("btn").style.color = "red";
+    console.log(carNames);
+}
 
 //6. Create an array of objects with 3 people inside it. Use the filter function to map by a name.
 
