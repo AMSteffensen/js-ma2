@@ -87,42 +87,6 @@ Person.prototype.greeting = function() {
 }
 
 
-/*
-
-function Person(first, last, age, gender, interests) {
-    this.name
-}
-
-/*
-function Bear(type){
-    this.type = type
-}
-
-Bear.prototype.growl = function() {
-    console.log('The ' + this.type + ' bear says');
-}
-
-function Grizzly() {
-    Bear.call(this, 'grizzly');
-}
-Grizzly.prototype = Object.create(Bear.prototype);
-
-console.log(grizzly.growl(), polar.growl())
-
-//var grizzly = new Bear('grizzly');
-//var polar = new Bear('polar');
-
-//grizzly is now an instance of Bear
-//console.log(grizzly instanceof Bear ) 
-//polar is now an instance of Bear
-//console.log(polar instanceof Bear ) 
-
-//console.log(grizzly, polar);
-//console.log(grizzly.growl());
-
-*/
-
-
 //2. Create an array of numbers from 1 - 10; slice the 5th number in the array
 
 var numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -132,11 +96,28 @@ var slicedNumbers = leftSlice + ',' + rightSlice;
 console.log(slicedNumbers);
 
 //3. Delete the last number in the array that you created above.
+delete numbers[9];
+console.log(numbers);
+//4. Given the following paragraph, create a JavaScript function that changes all 
+//mentions of strawberry to banana and strawberries to bananas: 
 
+String.prototype.replaceAll = function(search, replacement) {
+    var target = this;
+    return target.replace(new RegExp(search, 'gi'), replacement);
+};
 
-//4. Given the following paragraph, create a JavaScript function that changes all mentions of strawberry to banana and strawberries to bananas: 
-//Strawberries are a popular part of spring and summer diets throughout America. Mouths water from coast to coast each spring, when small white blossoms start to appear on strawberry bushes. They announce the impending arrival of the ruby red berries that so many people crave. Ripe strawberries taste sweet and have only a slight hint of tartness. They are also one of the healthiest fruits around. There are countless recipes for the luscious red berry, but many people prefer to eat them fresh and unaccompanied.
+var myString = 'Strawberries are a popular part of spring and summer diets throughout America. ' + 
+'Mouths water from coast to coast each spring, when small white blossoms start to ' +
+'appear on strawberry bushes. They announce the impending arrival of the ruby red ' +
+'berries that so many people crave. Ripe strawberries taste sweet and have only a ' +
+'slight hint of tartness. They are also one of the healthiest fruits around. ' +
+'There are countless recipes for the luscious red berry, but many people prefer ' +
+'to eat them fresh and unaccompanied. '
 
+myString = myString.replaceAll('strawberry', 'banana');
+myString = myString.replaceAll('Strawberries', 'Bananas');
+
+console.log(myString);
 
 //5. Create an array and a button. The array should contain 4 football clubs names. When the button is clicked, remove all elements out of the array that we just created. There after add in 4 names of cars inside that array. Log it to the console.
 
