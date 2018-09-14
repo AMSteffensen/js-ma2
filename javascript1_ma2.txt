@@ -17,3 +17,5 @@
 
 
 7. Briefly describe scope in JavaScript.
+
+

@@ -35,7 +35,6 @@ prarieDog.howl()
 Object.setPrototypeOf(fox, animal)
 fox.talk()
 
-
 var john = {
     name: 'Andreas',
     yearOfBirth: 1989,
@@ -135,6 +134,17 @@ function replaceNames() {
 
 //6. Create an array of objects with 3 people inside it. Use the filter function to map by a name.
 
+var persons = ['Andreas', 'Ingrid', 'Inger-lise'];
+var person = 'Andreas';
+const result = persons.filter(person => person === 'Andreas');
+
+console.log(result);
 
 //7. Create a simple function that logs the date.
 
+var getDate = function(){
+    var d = new Date();
+    return console.log(d);
+}
+
+getDate();
