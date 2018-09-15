@@ -2,11 +2,53 @@
 
 1. What is a function literal?
 
+	a object literal is an defined object, with data filled in between curly braces.
+	
+	The following is an example:
+
+	var myObject = {
+    	name: 'Andy',
+    	age: 29,
+    	isHired: false
+	};
+
+	Object literal property values can be of any data type, including functions.
+
+	A function literal is a defined function like this:
+
+	var myFunction = function(){
+    	alert("Hire me!");
+}
+	
 2. What is the constructor?
+	A constructor is a method used within classes: 
+
+		class Person {
+  			constructor() {
+    			this.name = "Andreas";
+  }
+}
+ 	var andreas = new Person();		
 
 3. Create a simple function that logs the date.
 
+var getDate = function(){
+    var d = new Date();
+    return console.log(d);
+}
+
+getDate();
+
 4. What does the return statement do?
+
+It ends the function call and returns a value when called.
+	example:
+
+	function myFunction(x) {
+		return x + x;
+	}
+
+	myFunction(3); // returns 6
 
 5. What will be written to the console from this function:
 		function myFunction(){
@@ -15,7 +57,16 @@
 		}
 		myFunction();
 
+		inside my function
+		
+		Since return ends the function call, the last console.log never would be executed.
 
 7. Briefly describe scope in JavaScript.
 
+Local scopes happen within two curly braces, global scopes happen outside the curly braces.
 
+example
+// global scope is out here
+var my function = function() {
+	// local scope is in here
+};
